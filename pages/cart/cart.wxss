@@ -1,0 +1,61 @@
+/* pages/cart/cart.wxss */
+
+/* ==========空购物车 BEGIN========== */
+
+.empty {
+  text-align: center;
+}
+
+.empty > image {
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.empty > image::after {
+  position: absolute;
+  color: #888;
+  content: '购物车还是空的';
+  transform: translate(-50%, -150%);
+}
+
+.navbtn {
+  width: 368rpx;
+  padding: 18rpx 0;
+  margin: 30rpx auto;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  background: #ff7f50;
+  border-radius: 4px;
+}
+
+/* ==========最终结算 BEGIN========== */
+
+.Settlement {
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  padding: 0 30rpx;
+  background: #fff;
+}
+
+.Settlement > view {
+  margin: auto;
+  /* margin-right: 30rpx; */
+  line-height: 1;
+}
+
+.Settlement > view > text {
+  color: #ff7f50;
+}
+
+.Settlement > button {
+  width: 160rpx;
+  margin: 0;
+  color: #fff;
+  background: #ff7f50;
+}

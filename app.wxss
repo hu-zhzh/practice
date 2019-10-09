@@ -1,0 +1,23 @@
+/**app.wxss**/
+
+page {
+  height: 100%;
+  background: #f2f2f2;
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+} */
+
+/* 
+ * 主色调 珊瑚色 #ff7f50
+ * 0 内容层 >> 100 导航层 >> 200 蒙层 >> 300 弹窗层
+ * 内容 black #000 >> semi #353535 >> grey #888 >> light #b2b2b2  
+ * 灰度 #F2F2F2 >> #E6E6E6 >> #D9D9D9 >> #CCCCCC >> #BFBFBF
+ * 左右缩进 20rpx 30rpx 40rpx 50rpx
+ */
+/* ==========页面头部 BEGIN========== */

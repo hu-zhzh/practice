@@ -1,0 +1,9 @@
+<!-- 顶部搜索 start-->
+<template name="search">
+  <view class="search">
+    <navigator class="search-cont" url="../search/search">
+      <icon type="search" size="42rpx" />
+      <view class="search-input">搜索商品</view>
+    </navigator>
+  </view>
+</template>

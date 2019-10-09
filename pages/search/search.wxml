@@ -1,0 +1,49 @@
+<!--pages/search/search.wxml-->
+<!-- 顶部搜索 start-->
+<view class="search">
+  <view class="search-cont">
+    <icon type="search" size="42rpx" />
+    <input class="search-input" bindinput="bInput" value="{{inptText}}" placeholder="搜索商品" focus />
+    <icon type="clear" bindtap="bDelSearch" size="42rpx" wx:if="{{inptText}}" />
+  </view>
+  <button class="btn cancel-btn" bindtap="bNavBack" size="mini" wx:if="{{!inptText}}">取消</button>
+  <button class="btn search-btn" bindtap="bGoSearch" size="mini" wx:else>搜索</button>
+</view>
+
+<!-- 历史搜索 start-->
+<view class="history">
+  <view class="head">
+    <text class="title">历史搜索</text>
+    <text class="delete" bindtap="bDelHistory">删除</text>
+  </view>
+  <view class="content">
+    <view class="text" bindtap="bTapHistory" data-index="{{index}}" wx:for="{{history}}">{{item}}</view>
+    <!-- <view class="text">﹀</view> -->
+  </view>
+</view>
+
+<view class="topnav">
+  <view>综合</view>
+  <view>销量</view>
+  <view>价格</view>
+  <view>筛选</view>
+</view>
+<!-- 搜索结果 start-->
+<view class="result">
+  <view class="result-head"></view>
+  <scroll-view class="result-cont">
+    <view class="item-wrap">
+      <view class="item" wx:for="[1,2,3]">
+        <image class="item-img" />
+        <view class="item-cont">
+          <view class="goods-name">女款圆领净色短袖T恤胜多负少</view>
+          <view class="goods-info">
+            <text class="price">￥49</text>
+            <text class="cost_price">￥58</text>
+            <text class="sale_num">销量0件</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

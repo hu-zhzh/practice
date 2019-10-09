@@ -1,0 +1,13 @@
+<!--miniprogram/pages/authorization/authorization.wxml-->
+<view class="auth-container">
+
+  <image class="auth-icon" style="background:#ccc" />
+
+  <view class="auth-content">
+    <view>申请获取以下权限：</view>
+    <view class="auth-item">获取你的公开信息（头像、昵称等）</view>
+  </view>
+
+  <button class="auth-btn" type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">授权</button>
+
+</view>

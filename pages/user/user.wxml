@@ -1,0 +1,13 @@
+<!--pages/user/user.wxml-->
+<!-- 页面头部 start-->
+<view class="head">
+  <image class="head-img" src="{{avatarUrl}}" />
+  <view class="head-text">{{nickName}}</view>
+</view>
+
+<!-- 菜单列表 start-->
+<view class="list" wx:for="{{listArr}}" wx:for-item="i">
+  <navigator class="list-nav" url="{{item.url}}" wx:for="{{i}}">
+    <text>{{item.name}}</text>
+  </navigator>
+</view>

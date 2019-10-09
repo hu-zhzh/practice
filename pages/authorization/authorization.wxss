@@ -1,0 +1,29 @@
+/* miniprogram/pages/authorization/authorization.wxss */
+
+.auth-container {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 125rpx 50rpx 0;
+  background: #fff;
+}
+
+.auth-container .auth-icon {
+  display: block;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 0 auto 50rpx;
+}
+
+.auth-container .auth-content {
+  padding: 100rpx 0;
+  border-top: 1px solid #ccc;
+}
+
+.auth-container .auth-content .auth-item {
+  margin-top: 25rpx;
+  color: #888;
+}
+
+.auth-container .auth-btn {
+  width: 650rpx;
+}

@@ -1,0 +1,155 @@
+/* pages/home/home.wxss */
+@import "../../template/search.wxss";
+
+/* ==========轮播横幅 BEGIN========== */
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========宫格菜单 BEGIN========== */
+
+.grids {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10rpx 0;
+  background: #fff;
+}
+
+.grid {
+  width: 25%;
+  padding: 10rpx 0;
+  text-align: center;
+}
+
+.grid-icon {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+/* ==========实时热销榜 BEGIN========== */
+
+.rexiao {
+  background: #fff;
+}
+
+.rexiao-head {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 50rpx 0;
+}
+
+.rexiao-head > text {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.rexiao-head view {
+  display: flex;
+  justify-content: space-between; /**两边对齐**/
+  font-size: 10px;
+  color: #98989f;
+}
+
+.rexiao-lists {
+  display: flex;
+}
+
+.rexiao-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.rexiao-item image {
+  width: 280rpx;
+  height: 300rpx;
+}
+
+.rexiao-item text {
+  font-size: 25rpx;
+}
+
+.rexiao-item view {
+  font-size: 30rpx;
+}
+
+/* ==========福利专场 BEGIN========== */
+
+.welfares {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 10px 5px;
+  background: #fff;
+}
+
+.welfares-good {
+  position: relative;
+  display: inline-block;
+  width: 47%;
+  height: 560rpx;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 24rpx;
+}
+
+.welfares-image {
+  display: inline-block;
+  width: 100%;
+  border: 1px #eee solid;
+}
+
+.welfares-good .product-name {
+  height: 28px;
+  margin: 0 5px;
+  margin-bottom: 5px;
+  color: #000;
+  text-align: left;
+}
+
+.product-price-wrap .product-price-new {
+  margin-left: 5px;
+  font-weight: 900;
+  color: #e80080;
+}
+
+.product-price-wrap .product-price-old {
+  padding-left: 2px;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.product-price-wrap .discount {
+  position: absolute;
+  right: 5px;
+  color: #fff;
+  background-color: #000;
+}
+
+/* ==========AD模态弹窗 BEGIN========== */
+
+.mask, .popout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mask {
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.popout {
+  z-index: 300;
+  width: 600rpx;
+  height: 800rpx;
+  margin: auto;
+  background: #fff;
+}

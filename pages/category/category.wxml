@@ -1,0 +1,18 @@
+<!--pages/category/category.wxml-->
+<import src="../../template/template.wxml" />
+
+<!-- 顶部搜索 start-->
+<template is="search"></template>
+
+<!-- 商品分类 start-->
+<view class="category">
+  <view class="c1">
+    <view class="c1-item {{index==categoryIndex?'active':''}}" bindtap="changeCate" data-idx="{{index}}" wx:for="{{oneCategory}}">{{item}}</view>
+  </view>
+  <view class="c2">
+    <navigator class="c2-item" url="../goodsdetails/goodsdetails" wx:for="{{twoCategory}}">
+      <image class="item-img" src="{{item.img}}" />
+      <view class="item-txt">{{item.name}}</view>
+    </navigator>
+  </view>
+</view>

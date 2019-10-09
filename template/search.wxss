@@ -1,0 +1,16 @@
+/* ==========顶部搜索 BEGIN========== */
+
+.search {
+  padding: 20rpx;
+  background: #fff;
+}
+
+.search-cont {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0 20rpx;
+  color: #888;
+  background: #e6e6e6;
+  border-radius: 1rem;
+}

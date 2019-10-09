@@ -1,0 +1,89 @@
+<!--pages/home/home.wxml-->
+<import src="../../template/template.wxml" />
+
+<scroll-view class="container" scroll-y>
+  <!-- 顶部搜索 start-->
+  <template is="search"></template>
+
+  <!-- 首页轮播图 start-->
+  <view style="height:8px;"></view>
+  <swiper indicator-dots autoplay circular style="background: #ccc;">
+    <block wx:for="{{array1}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 宫格导航 start-->
+  <view style="height:8px;"></view>
+  <view class="grids">
+    <block wx:for="{{array2}}" wx:key="*this">
+      <navigator class="grid" url="{{item.url}}">
+        <image class="grid-icon" src="{{item.icon}}" />
+        <view class="grid-lable">{{item.name}}</view>
+      </navigator>
+    </block>
+  </view>
+
+  <!-- 实时热销榜 start-->
+  <view style="height:8px;"></view>
+  <view class="rexiao">
+    <view class="rexiao-head">
+      <text>实时热销榜</text>
+      <view>
+        每15分钟更新一次
+        <text>查看更多 ></text>
+      </view>
+    </view>
+    <scroll-view scroll-x>
+      <view class="rexiao-lists">
+        <block wx:for="{{array3}}" wx:key="*this">
+          <view class="rexiao-item">
+            <image src="{{item.imageurl}}" />
+            <text>{{item.name}}</text>
+            <view>￥{{item.newprice}}</view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!--福利专场 start-->
+  <view style="height:8px;"></view>
+  <view class="welfare-container">
+    <view class="category-title">
+      <text class="title">福利专场</text>
+      <view class="line_name">
+        <text>每天早10晚8准时上新</text>
+      </view>
+    </view>
+    <scroll-view scroll-y="true">
+      <view class="welfares">
+        <block wx:for-items="{{array4}}" wx:key="name">
+          <view class="welfares-good" catchtap="catchTapCategory" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+            <view>
+              <image src="{{item.imageurl}}" class="welfares-image" mode="widthFix" />
+            </view>
+            <view class="product-name">
+              {{item.name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.newprice}}</p>
+              <p class="product-price-old">￥{{item.oldprice}}</p>
+              <p class="discount">{{item.discount}}折</p>
+            </view>
+
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+
+</scroll-view>
+
+<!-- AD弹窗 -->
+<view wx:if="{{isAD}}" catchtouchmove="ture">
+  <view class="mask" bindtap="close"></view>
+  <view class="popout">广告</view>
+</view>
